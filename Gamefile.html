@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    
+</head>
+
+<body>
+    <center>
+        <b>
+            <h1>Number Guessing Game</h1>
+            <h2>Choose number range</h2>
+        </b>
+        <!-- Here users can choose different levels with different ranges and max guesses, or create a custom level-->
+        <input type="radio" id="easier" name="numRangein" value="10">
+        <label for="easier">Easy (1-10, 5 guesses max)</label><br>
+        <input type="radio" id="harder" name="numRangein" value="20">
+        <label for="harder">Hard(1-20, 10 guesses max)</label><br>
+        <input type="radio" id="harder" name="numRangein" value="30">
+        <label for="harder">Custom(Choose number between 0-100, and choose max guesses)</label>
+        <input type="number" id="customnum" name="customisednum" min="0" max="100">
+        <input type="number" id="customguess" name="customguessing" min="0" max="100"><br><br>
+        <!-- Here is a clickable button which is used in relation to the <script> code. -->
+        <button id="rangesubmission">Choose Range</button><br><br><br>
+        <b>
+            <p1>Enter a guess down below.</p1><br><br>
+        </b>
+        <!-- Here users can input an integer from 0-20, either by typing or by using the arrows provided -->
+        <input type="number" id="numeric" name="inputnumber" min="0" max="20" height="20">
+        <!-- Here is a clickable button which is used in relation to the <script> code. -->
+        <button id="submission">Make Guess!</button> <br>
+        <!-- The text will change in these elements according to user input-->
+        <p2 id="guessintotal">Total Guesses: 0&nbsp;&nbsp;</p2>
+        <p3 id="madeguess">Made Guesses:&nbsp;&nbsp;</p3> <br>
+        <p4 id="high">Highest Guess:&nbsp;&nbsp;</p4>
+        <p5 id="low">Lowest Guess: </p5><br><br>
+        <p6 id="responsemsg"> </p6><br>
+        <p7 id="guessmsg"> </p7>
+    </center>
+
+    <style>
+        /* Here I set the font for the text in each tag */
+        h1 {
+            font-size: 80px;
+            border-style: solid;
+            background-color: aquamarine;
+        }
+        h2 {
+            font-size: 40px;
+        }
+
+        p1 {
+            font-size: 40px;
+        }
+
+        #numeric {
+            font-size: 30px;
+        }
+
+        #submission {
+            font-size: 30px;
+        }
+
+        p6 {
+            font-size: 30px;
+        }
+        #rangesubmission {
+            font-size: 30px;
+        }
+    </style>
+<!-- Here, HTML is told to get its script code from the source "game.js" file. -->
+<script type="text/javascript" src="./game.js"></script>
+</body>
+
+</html>
